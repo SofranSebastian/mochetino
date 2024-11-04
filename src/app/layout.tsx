@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
-const dmSans = DM_Sans({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MOCHETINO",
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={ twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}
+        className={twMerge(montserrat.className, "antialiased bg-[#EAEEFE]")}
       >
         {children}
       </body>

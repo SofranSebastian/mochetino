@@ -7,13 +7,11 @@ export const Hero = () => {
     <section className="text-black pt-4 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_66%)]">
       <div className="py-4 px-4 md:flex flex-row">
         <div className=" md:py-3 md:px-3 md:flex md:items-start md:flex-col md:justify-center">
-          <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
-            SOLUȚIA PENTRU COVOARELE MURDARE ESTE AICI
-          </div>
-          <h1 className=" leading-relaxed text-5xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-            Calea spre comfortul în propria locuință
+          <div className="tag">SOLUȚIA PENTRU COVOARELE MURDARE ESTE AICI</div>
+          <h1 className="h1-style">
+            Calea către relaxare în casa dumneavoastră.
           </h1>
-          <p className="text-xl text-[#010D3E] tracking-tight mt-6">
+          <p className="p-style">
             Dă-i viață covorului tău! Fiecare pas pe covorul tău aduce amintiri,
             dar și murdărie. Oferă-i ocazia de a străluci din nou! Spălarea
             covorului nu este doar o chestiune estetică, ci și o alegere

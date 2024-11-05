@@ -5,8 +5,10 @@ export const ProductShowcase = () => {
   return (
     <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-5 flex justify-center">
       <div className="container flex flex-col items-center justify-center">
-        <div className="flex justify-center">
-          <div className="tag">REZOLVĂ PROBLEMA DISCOMFORTULUI</div>
+        <div className="max-w-[540px] mx-auto">
+          <div className="flex justify-center">
+            <div className="tag">REZOLVĂ PROBLEMA DISCOMFORTULUI</div>
+          </div>
         </div>
         <h1 className="text-center h1-style">
           O nouă soluție pentru curățarea murdăriei de pe covoare.

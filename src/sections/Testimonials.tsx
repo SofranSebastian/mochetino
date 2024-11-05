@@ -7,73 +7,124 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "Serviciul a fost excelent! Covorul meu arată ca nou. Recomand cu căldură!",
     imageSrc: avatar1.src,
-    name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    name: "Maria D.",
+    username: "@mariad",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Rapid și eficient! Foarte mulțumit de rezultate. Profesionalism la superlativ!",
     imageSrc: avatar2.src,
-    name: "Josh Smith",
-    username: "@jjsmith",
+    name: "Andrei P.",
+    username: "@andreip",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "O experiență plăcută! Echipa a fost amabilă și covorul a fost curățat perfect.",
     imageSrc: avatar3.src,
-    name: "Morgan Lee",
-    username: "@morganleewhiz",
+    name: "Ioana L.",
+    username: "@ioanal",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "Sunt impresionat de atenția la detalii. Aroma proaspătă a covorului m-a surprins plăcut!",
     imageSrc: avatar4.src,
-    name: "Casey Jordan",
-    username: "@caseyj",
+    name: "Cristian T.",
+    username: "@cristiant",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "Foarte mulțumită de servicii! Prețuri accesibile și rezultate vizibile.",
     imageSrc: avatar5.src,
-    name: "Taylor Kim",
-    username: "@taylorkimm",
+    name: "Elena M.",
+    username: "@elenam",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "Am apelat la ei de mai multe ori. Nu m-au dezamăgit niciodată. Foarte calitativi!",
     imageSrc: avatar6.src,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    name: "Vlad S.",
+    username: "@vlads",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "Un serviciu de încredere! Covorul meu de lână s-a curățat perfect, fără a-i afecta textura.",
     imageSrc: avatar7.src,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    name: "Anca R.",
+    username: "@ancar",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "Promptitudine și profesionalism! Recomand cu siguranță tuturor celor care au nevoie de curățenie.",
     imageSrc: avatar8.src,
-    name: "Sam Dawson",
-    username: "@dawsontechtips",
+    name: "Ion C.",
+    username: "@ionc",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "Cea mai bună firmă de curățat covoare! Încredere și calitate garantată!",
     imageSrc: avatar9.src,
-    name: "Casey Harper",
-    username: "@casey09",
+    name: "Roxana B.",
+    username: "@roxanab",
   },
 ];
 
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
+
+const TestimonialsColumn = (props: {
+  className?: string;
+  testimonials: typeof testimonials;
+}) => (
+  <div
+    className={twMerge(
+      "flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",
+      props.className
+    )}
+  >
+    {props.testimonials.map(({ text, imageSrc, name, username }) => (
+      <div key={text} className="card">
+        <div>{text}</div>
+        <div className="flex items-center gap-2 mt-5">
+          <Image
+            src={imageSrc}
+            alt="name"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full"
+          />
+          <div className="flex flex-col">
+            <div className="font-medium tracking-tight leading-5">{name}</div>
+            <div className="leading-5 tracking-tight">{username}</div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
 export const Testimonials = () => {
   return (
-    <section className="py-5 flex justify-center">
+    <section className="py-5 flex justify-center bg-white">
       <div className="container flex flex-col items-center justify-center">
         <div className="tag">Păreri</div>
         <h2 className="text-center h1-style">Ce spun clienții noștrii</h2>
         <p className="text-center p-style">
-          O mică afacere de familie care reușește să{" "}
+          O mică afacere de familie care se ocupă cu spălarea covoarelor aduce
+          prospețime și confort în casele oamenilor. Prin servicii
+          personalizate, aceștia îndepărtează murdăria și alergenii,
+          revitalizând covoarele și îmbunătățind estetică locuințelor.
         </p>
+        <div className="flex justify-center gap-6">
+          <TestimonialsColumn testimonials={firstColumn} />
+          <TestimonialsColumn
+            testimonials={secondColumn}
+            className="hidden sm:flex"
+          />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            className="hidden md:flex"
+          />
+        </div>
       </div>
     </section>
   );

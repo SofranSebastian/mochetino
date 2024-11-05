@@ -7,7 +7,7 @@ export const ProductShowcase = () => {
       <div className="container flex flex-col items-center justify-center">
         <div className="max-w-[540px] mx-auto">
           <div className="flex justify-center">
-            <div className="tag">REZOLVĂ PROBLEMA DISCOMFORTULUI</div>
+            <div className="tag">REZOLVĂ PROBLEMA DISCONFORTULUI</div>
           </div>
         </div>
         <h1 className="text-center h1-style">

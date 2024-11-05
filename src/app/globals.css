@@ -30,4 +30,8 @@
   .p-style {
     @apply text-xl text-[#010D3E] tracking-tight mt-6;
   }
+
+  .card {
+    @apply p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
+  }
 }

@@ -30,9 +30,9 @@ export const Testimonials = () => {
             personalizate, aceștia îndepărtează murdăria și alergenii,
             revitalizând covoarele și îmbunătățind estetică locuințelor.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1800px] px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-12 w-full max-w-[1800px] px-6 sm:px-8 lg:px-12">
             {testimonials.map(({ text, name }) => (
-              <div key={text} className="relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col min-h-[300px]">
+              <div key={text} className="relative bg-white p-8 sm:p-10 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col min-h-[300px]">
                 <div className="absolute -top-4 left-8 bg-[#FF0000] text-white p-2 rounded-lg shadow-md">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6 h-6" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -62,13 +62,13 @@ export const Testimonials = () => {
               </div>
             ))}
           </div>
-          <p className="text-sm text-gray-500 mt-12 italic flex items-center justify-center gap-2 px-4">
-            * Toate recenziile sunt reale și pot fi verificate pe {" "}
+          <p className="text-sm text-gray-500 mt-12 italic flex flex-col sm:flex-row items-center justify-center gap-2 px-4">
+            <span>* Toate recenziile sunt reale și pot fi verificate pe</span>
             <a 
               href="https://www.facebook.com/profile.php?id=61569051051211" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-[#FF0000] hover:text-[#E60000] font-medium inline-flex items-center gap-1 transition-colors"
+              className="text-[#FF0000] hover:text-[#E60000] font-medium inline-flex items-center gap-1 transition-colors whitespace-nowrap"
             >
               pagina noastră de Facebook
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-4 h-4" viewBox="0 0 24 24">

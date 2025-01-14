@@ -44,6 +44,13 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navItems = [
+    { label: "Acasă", href: "#home" },
+    { label: "Despre Noi", href: "#about" },
+    { label: "Servicii", href: "#services" },
+    { label: "Păreri", href: "#testimonials" },
+  ];
+
   return (
     <header className="sticky top-0 z-20">
       <div className="absolute inset-0 bg-gradient-to-r from-white to-red-50 backdrop-blur-sm"></div>
@@ -56,26 +63,19 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden min-[850px]:flex items-center gap-6 lg:gap-8">
-            <a onClick={(e) => handleScrollTo(e, 'home')} href="#home" className="group text-gray-700 transition-colors font-medium relative py-2 cursor-pointer">
-              <span className="relative z-10">Acasă</span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'home' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'about')} href="#about" className="group text-gray-700 transition-colors font-medium relative py-2">
-              <span className="relative z-10">Despre noi</span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'services')} href="#services" className="group text-gray-700 transition-colors font-medium relative py-2">
-              <span className="relative z-10">Servicii</span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'services' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'testimonials')} href="#testimonials" className="group text-gray-700 transition-colors font-medium relative py-2">
-              <span className="relative z-10">Păreri</span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'testimonials' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'contact')} href="#contact" className="group text-gray-700 transition-colors font-medium relative py-2">
-              <span className="relative z-10">Contact</span>
-              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-            </a>
+            {navItems.map((item) => (
+              <a 
+                key={item.label}
+                onClick={(e) => handleScrollTo(e, item.href.replace('#', ''))} 
+                href={item.href} 
+                className="group text-gray-700 transition-colors font-medium relative py-2"
+              >
+                <span className="relative z-10">{item.label}</span>
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${
+                  clickedLink === item.href.replace('#', '') ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
+              </a>
+            ))}
             <a 
               href="tel:0725629585"
               className="bg-[#FF0000] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-[#E60000] transition-all duration-300"
@@ -104,26 +104,22 @@ export const Header = () => {
         {/* Mobile Navigation */}
         <div className={`min-[850px]:hidden fixed left-0 right-0 top-[64px] transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
           <nav className="mx-4 py-4 space-y-3 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg text-center">
-            <a onClick={(e) => handleScrollTo(e, 'home')} href="#home" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
-              <span className="relative z-10 inline-block">Acasă</span>
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'home' ? 'w-12' : 'w-0 group-hover:w-12'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'about')} href="#about" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
-              <span className="relative z-10 inline-block">Despre noi</span>
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'about' ? 'w-20' : 'w-0 group-hover:w-20'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'services')} href="#services" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
-              <span className="relative z-10 inline-block">Servicii</span>
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'services' ? 'w-16' : 'w-0 group-hover:w-16'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'testimonials')} href="#testimonials" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
-              <span className="relative z-10 inline-block">Păreri</span>
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'testimonials' ? 'w-14' : 'w-0 group-hover:w-14'}`}></span>
-            </a>
-            <a onClick={(e) => handleScrollTo(e, 'contact')} href="#contact" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
-              <span className="relative z-10 inline-block">Contact</span>
-              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${clickedLink === 'contact' ? 'w-16' : 'w-0 group-hover:w-16'}`}></span>
-            </a>
+            {navItems.map((item) => (
+              <a 
+                key={item.label}
+                onClick={(e) => {
+                  handleScrollTo(e, item.href.replace('#', ''));
+                  setIsMenuOpen(false);
+                }} 
+                href={item.href} 
+                className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4"
+              >
+                <span className="relative z-10 inline-block">{item.label}</span>
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${
+                  clickedLink === item.href.replace('#', '') ? 'w-16' : 'w-0 group-hover:w-16'
+                }`}></span>
+              </a>
+            ))}
             <a 
               href="tel:0725629585"
               className="block bg-[#FF0000] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-[#E60000] transition-all duration-300 mx-4 text-center"

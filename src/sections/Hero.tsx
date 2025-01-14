@@ -78,6 +78,9 @@ export const Hero = () => {
         <div className="grid max-[1300px]:grid-cols-1 min-[1300px]:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left content */}
           <div className="max-w-2xl mx-auto min-[1300px]:mx-0 space-y-6 sm:space-y-8 text-center min-[1300px]:text-left w-full max-[1300px]:max-w-[650px]">
+            <div className="inline-block px-4 py-2 bg-red-50 text-[#FF0000] rounded-lg font-medium text-sm">
+              Spălătorie covoare Timișoara
+            </div>
             <h1 className="text-6xl font-bold text-gray-800 leading-tight">
               Redă strălucirea {' '}
               <span className="text-[#FF0000]">covoarelor</span>
@@ -89,6 +92,13 @@ export const Hero = () => {
               că vei redescoperi prospețimea și frumusețea originală a covoarelor tale. Serviciu rapid, 
               rezultate de durată, și satisfacție garantată.
             </p>
+            <div className="flex max-[510px]:items-start min-[510px]:items-center gap-2 text-sm text-gray-500 justify-center min-[1300px]:justify-start max-[510px]:max-w-[280px] mx-auto min-[1300px]:mx-0">
+              <svg className="w-4 h-4 text-[#FF0000] max-[510px]:flex-shrink-0 max-[510px]:mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span className="max-[510px]:leading-tight">Mochetino ajunge doar în Timișoara și în comunele de lângă Timișoara</span>
+            </div>
             <div className="flex flex-wrap gap-6 justify-center min-[1300px]:justify-start">
               <a 
                 href="tel:0725629585"

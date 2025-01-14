@@ -10,7 +10,6 @@ export const Footer = () => {
           <a href="#about">Despre noi</a>
           <a href="#services">Servicii</a>
           <a href="#testimonials">Păreri</a>
-          <a href="#contact">Contact</a>
           <a 
             href="tel:0725629585" 
             className="text-[#FF0000] hover:text-white hover:underline transition-colors"

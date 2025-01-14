@@ -2,10 +2,37 @@
 
 import Logo from "@/assets/LOGO_RED.svg";
 import MenuIcon from "@/assets/MenuIcon.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const sections = ['home', 'about', 'services', 'contact'];
+    const observers: { [key: string]: IntersectionObserver } = {};
+
+    sections.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observers[sectionId] = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setActiveSection(sectionId);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        observers[sectionId].observe(section);
+      }
+    });
+
+    return () => {
+      Object.values(observers).forEach(observer => observer.disconnect());
+    };
+  }, []);
 
   const handleScrollToHome = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -13,7 +40,7 @@ export const Header = () => {
     if (homeSection) {
       homeSection.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false); // Close mobile menu after clicking
+    setIsMenuOpen(false);
   };
 
   return (
@@ -28,21 +55,21 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-            <a onClick={handleScrollToHome} href="#home" className="group text-gray-700 transition-colors font-medium relative py-2 cursor-pointer">
+            <a onClick={handleScrollToHome} href="#home" className={`group text-gray-700 transition-colors font-medium relative py-2 cursor-pointer ${activeSection === 'home' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10">Acasă</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'home' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </a>
-            <a href="#" className="group text-gray-700 transition-colors font-medium relative py-2">
+            <a href="#about" className={`group text-gray-700 transition-colors font-medium relative py-2 ${activeSection === 'about' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10">Despre noi</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </a>
-            <a href="#" className="group text-gray-700 transition-colors font-medium relative py-2">
+            <a href="#services" className={`group text-gray-700 transition-colors font-medium relative py-2 ${activeSection === 'services' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10">Servicii</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'services' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </a>
-            <a href="#" className="group text-gray-700 transition-colors font-medium relative py-2">
+            <a href="#contact" className={`group text-gray-700 transition-colors font-medium relative py-2 ${activeSection === 'contact' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10">Contact</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute bottom-0 left-0 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </a>
             <a 
               href="tel:0725629585"
@@ -65,21 +92,21 @@ export const Header = () => {
         {/* Mobile Navigation */}
         <div className={`md:hidden fixed left-0 right-0 top-[64px] transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
           <nav className="mx-4 py-4 space-y-3 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg text-center">
-            <a onClick={handleScrollToHome} href="#home" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
+            <a onClick={handleScrollToHome} href="#home" className={`group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4 ${activeSection === 'home' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10 inline-block">Acasă</span>
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-12"></span>
+              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'home' ? 'w-12' : 'w-0 group-hover:w-12'}`}></span>
             </a>
-            <a href="#" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
+            <a href="#about" className={`group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4 ${activeSection === 'about' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10 inline-block">Despre noi</span>
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-20"></span>
+              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'about' ? 'w-20' : 'w-0 group-hover:w-20'}`}></span>
             </a>
-            <a href="#" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
+            <a href="#services" className={`group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4 ${activeSection === 'services' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10 inline-block">Servicii</span>
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-16"></span>
+              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'services' ? 'w-16' : 'w-0 group-hover:w-16'}`}></span>
             </a>
-            <a href="#" className="group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4">
+            <a href="#contact" className={`group block text-gray-700 hover:text-[#FF0000] font-medium relative py-2 px-4 ${activeSection === 'contact' ? 'text-[#FF0000]' : ''}`}>
               <span className="relative z-10 inline-block">Contact</span>
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF0000] transition-all duration-300 group-hover:w-16"></span>
+              <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF0000] transition-all duration-300 ${activeSection === 'contact' ? 'w-16' : 'w-0 group-hover:w-16'}`}></span>
             </a>
             <a 
               href="tel:0725629585"

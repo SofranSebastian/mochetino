@@ -13,6 +13,13 @@ export const Hero = () => {
         videoRef.current.pause();
       } else {
         videoRef.current.play();
+        // Scroll to video on smaller screens
+        if (window.innerWidth < 1300) {
+          videoRef.current.parentElement?.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+          });
+        }
       }
       setIsPlaying(!isPlaying);
     }

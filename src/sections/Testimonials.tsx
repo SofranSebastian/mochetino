@@ -1,129 +1,81 @@
-import avatar1 from "@/assets/avatar-1.png";
-import avatar2 from "@/assets/avatar-2.png";
-import avatar3 from "@/assets/avatar-3.png";
-import avatar4 from "@/assets/avatar-4.png";
-import avatar5 from "@/assets/avatar-5.png";
-import avatar6 from "@/assets/avatar-6.png";
-import avatar7 from "@/assets/avatar-7.png";
-import avatar8 from "@/assets/avatar-8.png";
-import avatar9 from "@/assets/avatar-9.png";
-import Image from "next/image";
-import { twMerge } from "tailwind-merge";
-
 const testimonials = [
   {
-    text: "Serviciul a fost excelent! Covorul meu arată ca nou. Recomand cu căldură!",
-    imageSrc: avatar1.src,
-    name: "Maria D.",
-    username: "@mariad",
+    text: "Felicitări! Albul din covoare se vede ca atunci când le-am cumpărat. Am dus covoarele și la alte spălătorii, dar niciunde nu au fost spălate atât de bine! Parfumate și livrate rapid. Recomand cu toată încrederea!",
+    name: "Client Mulțumit",
   },
   {
-    text: "Rapid și eficient! Foarte mulțumit de rezultate. Profesionalism la superlativ!",
-    imageSrc: avatar2.src,
-    name: "Andrei P.",
-    username: "@andreip",
+    text: "Foarte multumita! Toate covoarele au venit foarte curate, pufoase si parfumate in 24 h 😊! Client multumit! Succes!",
+    name: "Client Mulțumit",
   },
   {
-    text: "O experiență plăcută! Echipa a fost amabilă și covorul a fost curățat perfect.",
-    imageSrc: avatar3.src,
-    name: "Ioana L.",
-    username: "@ioanal",
-  },
-  {
-    text: "Sunt impresionat de atenția la detalii. Aroma proaspătă a covorului m-a surprins plăcut!",
-    imageSrc: avatar4.src,
-    name: "Cristian T.",
-    username: "@cristiant",
-  },
-  {
-    text: "Foarte mulțumită de servicii! Prețuri accesibile și rezultate vizibile.",
-    imageSrc: avatar5.src,
-    name: "Elena M.",
-    username: "@elenam",
-  },
-  {
-    text: "Am apelat la ei de mai multe ori. Nu m-au dezamăgit niciodată. Foarte calitativi!",
-    imageSrc: avatar6.src,
-    name: "Vlad S.",
-    username: "@vlads",
-  },
-  {
-    text: "Un serviciu de încredere! Covorul meu de lână s-a curățat perfect, fără a-i afecta textura.",
-    imageSrc: avatar7.src,
-    name: "Anca R.",
-    username: "@ancar",
-  },
-  {
-    text: "Promptitudine și profesionalism! Recomand cu siguranță tuturor celor care au nevoie de curățenie.",
-    imageSrc: avatar8.src,
-    name: "Ion C.",
-    username: "@ionc",
-  },
-  {
-    text: "Cea mai bună firmă de curățat covoare! Încredere și calitate garantată!",
-    imageSrc: avatar9.src,
-    name: "Roxana B.",
-    username: "@roxanab",
-  },
+    text: "Apreciez promptitudinea si profesionalismul echipei!",
+    name: "Client Mulțumit",
+  }
 ];
-
-const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
-
-const TestimonialsColumn = (props: {
-  className?: string;
-  testimonials: typeof testimonials;
-}) => (
-  <div
-    className={twMerge(
-      "flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",
-      props.className
-    )}
-  >
-    {props.testimonials.map(({ text, imageSrc, name, username }) => (
-      <div key={text} className="card">
-        <div>{text}</div>
-        <div className="flex items-center gap-2 mt-5">
-          <Image
-            src={imageSrc}
-            alt="name"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
-          />
-          <div className="flex flex-col">
-            <div className="font-medium tracking-tight leading-5">{name}</div>
-            <div className="leading-5 tracking-tight">{username}</div>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-);
 
 export const Testimonials = () => {
   return (
-    <section className="py-5 flex justify-center bg-white">
-      <div className="container flex flex-col items-center justify-center">
-        <div className="tag">Păreri</div>
-        <h2 className="text-center h1-style">Ce spun clienții noștrii</h2>
-        <p className="text-center p-style">
-          O mică afacere de familie care se ocupă cu spălarea covoarelor aduce
-          prospețime și confort în casele oamenilor. Prin servicii
-          personalizate, aceștia îndepărtează murdăria și alergenii,
-          revitalizând covoarele și îmbunătățind estetică locuințelor.
-        </p>
-        <div className="flex justify-center gap-6">
-          <TestimonialsColumn testimonials={firstColumn} />
-          <TestimonialsColumn
-            testimonials={secondColumn}
-            className="hidden sm:flex"
-          />
-          <TestimonialsColumn
-            testimonials={thirdColumn}
-            className="hidden md:flex"
-          />
+    <section id="testimonials" className="min-h-screen flex items-center justify-center bg-gradient-to-r from-white to-red-50">
+      <div className="container max-w-[1800px] px-0 sm:px-2 lg:px-4 py-24">
+        <div className="flex flex-col items-center">
+          <div className="inline-block px-4 py-2 bg-red-50 text-[#FF0000] rounded-lg font-medium text-sm mb-6">
+            Păreri
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6 text-center">
+            Ce spun <span className="text-[#FF0000]">clienții</span> noștri
+          </h2>
+          <p className="text-gray-600 text-lg mb-16 max-w-3xl text-center px-4">
+            O mică afacere de familie care se ocupă cu spălarea covoarelor aduce
+            prospețime și confort în casele oamenilor. Prin servicii
+            personalizate, aceștia îndepărtează murdăria și alergenii,
+            revitalizând covoarele și îmbunătățind estetică locuințelor.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1800px] px-4">
+            {testimonials.map(({ text, name }) => (
+              <div key={text} className="relative bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col min-h-[300px]">
+                <div className="absolute -top-4 left-8 bg-[#FF0000] text-white p-2 rounded-lg shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                
+                <div className="flex-grow">
+                  <div className="text-gray-700 text-lg leading-relaxed mt-4">
+                    {text}
+                  </div>
+                </div>
+                
+                <div className="mt-auto pt-8">
+                  <div className="w-16 h-0.5 bg-red-100 mb-4"></div>
+                  <div className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-full bg-red-50 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#FF0000]">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="font-semibold text-gray-800">{name}</div>
+                      <div className="text-sm text-gray-500">Client verificat</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-gray-500 mt-12 italic flex items-center justify-center gap-2 px-4">
+            * Toate recenziile sunt reale și pot fi verificate pe {" "}
+            <a 
+              href="https://www.facebook.com/profile.php?id=61569051051211" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#FF0000] hover:text-[#E60000] font-medium inline-flex items-center gap-1 transition-colors"
+            >
+              pagina noastră de Facebook
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-4 h-4" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+            </a>
+          </p>
         </div>
       </div>
     </section>

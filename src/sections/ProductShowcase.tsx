@@ -27,7 +27,7 @@ export const ProductShowcase = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-[1800px]">
         <div className="grid max-[1300px]:grid-cols-1 min-[1300px]:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left side - Image */}
-          <div className="relative max-[1300px]:order-2 min-[1300px]:order-1 w-full max-[1300px]:max-w-[650px] mx-auto">
+          <div className="relative max-[1300px]:order-2 min-[1300px]:order-1 w-full max-[1300px]:max-w-[650px] mx-auto flex items-center justify-center">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={productDescription}
@@ -45,7 +45,7 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="max-w-2xl mx-auto min-[1300px]:mx-0 space-y-6 w-full max-[1300px]:max-w-[650px] max-[1300px]:order-1 min-[1300px]:order-2">
+          <div className="max-w-2xl mx-auto min-[1300px]:mx-0 space-y-6 w-full max-[1300px]:max-w-[650px] max-[1300px]:order-1 min-[1300px]:order-2 max-[1300px]:text-center">
             <div className="inline-block px-4 py-2 bg-red-50 text-[#FF0000] rounded-lg font-medium text-sm">
               Despre Noi
             </div>

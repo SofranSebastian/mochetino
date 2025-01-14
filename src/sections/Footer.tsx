@@ -26,7 +26,7 @@ export const Footer = () => {
             <SocialPin />
             <SocialYoutube />
           </div>
-          <p>&copy; 2024 MOCHETINO, SRL. Toate drepturile sunt rezervate.</p>
+          <p>&copy; 2025 MOCHETINO, SRL. Toate drepturile sunt rezervate.</p>
         </div>
       </div>
     </footer>

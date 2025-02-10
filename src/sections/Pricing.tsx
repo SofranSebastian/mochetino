@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
   {
-    title: "Covoare normale sub 10m²",
+    title: "Covoare normale",
     monthlyPrice: "15",
     popular: false,
     features: [
@@ -37,19 +37,11 @@ const pricingTiers = [
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
           </svg>
         ),
-      },
-      {
-        text: "Transport contra cost",
-        icon: (
-          <svg className="w-4 h-4 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        ),
-      },
+      }
     ],
   },
   {
-    title: "Covoare peste 10m²",
+    title: "Tarifare finală",
     monthlyPrice: "15/20",
     popular: true,
     features: [
@@ -58,22 +50,6 @@ const pricingTiers = [
         icon: (
           <svg className="w-4 h-4 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-        ),
-      },
-      {
-        text: "15 RON/m² covoare normale",
-        icon: (
-          <svg className="w-4 h-4 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        ),
-      },
-      {
-        text: "20 RON/m² covoare speciale",
-        icon: (
-          <svg className="w-4 h-4 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         ),
       },
@@ -88,7 +64,7 @@ const pricingTiers = [
     ],
   },
   {
-    title: "Covoare speciale sub 10m²",
+    title: "Covoare speciale",
     monthlyPrice: "20",
     popular: false,
     features: [
@@ -123,15 +99,7 @@ const pricingTiers = [
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
           </svg>
         ),
-      },
-      {
-        text: "Transport contra cost",
-        icon: (
-          <svg className="w-4 h-4 text-[#FF0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        ),
-      },
+      }
     ],
   },
 ];
@@ -162,7 +130,7 @@ export const Pricing = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-[1800px]">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <div className="inline-block px-4 py-2 bg-red-50 text-[#FF0000] rounded-lg font-medium text-sm mb-4">
-            Servicii și Prețuri
+            Tarife
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6">
             Prețuri <span className="text-[#FF0000]">transparente</span> și competitive
@@ -184,42 +152,84 @@ export const Pricing = () => {
               key={title}
               className={twMerge(
                 "relative bg-white rounded-2xl p-6 shadow-lg transition-transform duration-300 hover:scale-105",
-                popular && "border-2 border-[#FF0000]"
+                popular && "border-2 border-[#FF0000] shadow-xl -mt-4 pb-12 -mb-4 pt-12"
               )}
             >
               {popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF0000] text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Cel mai solicitat
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF0000] text-white px-6 py-1.5 rounded-full text-sm font-medium shadow-md">
+                  Recomandat
                 </div>
               )}
               
               <div className="flex flex-col h-full">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                <h3 className={twMerge(
+                  "text-xl font-bold text-gray-800 mb-2",
+                  popular && "text-[#FF0000]"
+                )}>
                   {title}
                 </h3>
-                
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-4xl font-bold text-[#FF0000]">
-                    {monthlyPrice}
-                  </span>
-                  <span className="text-lg font-medium text-gray-600">
-                    RON/m²
-                  </span>
-                </div>
+                {title === "Covoare normale" && (
+                  <p className="text-sm text-gray-500 italic mb-4">
+                    *fără păr de animale, cu grosime mai mică de 2cm
+                  </p>
+                )}
+                {title === "Tarifare finală" && (
+                  <>
+                    <p className="text-sm text-gray-500 italic mb-4">
+                      *în funcție de dimensiunea totală a covoarelor
+                    </p>
+                   
+                  </>
+                )}
+                {title === "Covoare speciale" && (
+                  <p className="text-sm text-gray-500 italic mb-4">
+                    *cu păr de animale, cu grosime mai mare de 2cm (shaggy + lână)
+                  </p>
+                )}
 
-                <ul className="flex-grow space-y-3 mb-6">
-                  {features.map((feature) => (
-                    <li
-                      key={feature.text}
-                      className="flex items-center gap-3 text-gray-600"
-                    >
-                      <div className="w-5 h-5 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
-                        {feature.icon}
-                      </div>
-                      <span>{feature.text}</span>
-                    </li>
-                  ))}
-                </ul>
+                {title === "Tarifare finală" && (
+                  <div className="flex flex-col gap-4">
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-100 hover:shadow-md transition-shadow">
+                      <div className="text-2xl font-bold text-[#FF0000] mb-2">&lt;10m²</div>
+                      <p className="text-sm font-medium text-gray-700">
+                        Sub 10m² totali: preț fix 150 RON
+                      </p>
+                    </div>
+                    
+                    <div className="bg-red-50 rounded-lg p-4 border border-red-100 hover:shadow-md transition-shadow">
+                      <div className="text-2xl font-bold text-[#FF0000] mb-2">≥10m²</div>
+                      <p className="text-sm font-medium text-gray-700">
+                        Începand cu 10m² totali: preț calculat în funcție de dimensiunea totală (transport inclus)
+                      </p>
+                    </div>
+                  </div>
+                )}
+                {title !== "Tarifare finală" && (
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="text-4xl font-bold text-[#FF0000]">
+                      {monthlyPrice}
+                    </span>
+                    <span className="text-lg font-medium text-gray-600">
+                      RON/m²
+                    </span>
+                  </div>
+                )}
+
+                {title !== "Tarifare finală" && (
+                  <ul className="flex-grow space-y-3 mb-6">
+                    {features.map((feature) => (
+                      <li
+                        key={feature.text}
+                        className="flex items-center gap-3 text-gray-600"
+                      >
+                        <div className="w-5 h-5 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0">
+                          {feature.icon}
+                        </div>
+                        <span>{feature.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}
@@ -255,3 +265,4 @@ export const Pricing = () => {
     </section>
   );
 };
+

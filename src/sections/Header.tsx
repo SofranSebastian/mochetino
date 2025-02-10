@@ -47,7 +47,7 @@ export const Header = () => {
   const navItems = [
     { label: "Acasă", href: "#home" },
     { label: "Despre Noi", href: "#about" },
-    { label: "Servicii", href: "#services" },
+    { label: "Tarife", href: "#services" },
     { label: "Păreri", href: "#testimonials" },
   ];
 

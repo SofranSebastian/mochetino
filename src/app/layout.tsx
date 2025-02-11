@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import { Analytics } from '@vercel/analytics/next';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         className={twMerge(montserrat.className, "antialiased bg-[#EAEEFE]")}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

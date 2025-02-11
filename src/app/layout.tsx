@@ -6,8 +6,8 @@ import { twMerge } from "tailwind-merge";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MOCHETINO",
-  description: "MOCHETINO - Landing Page",
+  title: "Spalatorie covoare Timisoara - MOCHETINO",
+  description: "Spalatorie covoare Timisoara - MOCHETINO",
 };
 
 export default function RootLayout({

@@ -8,16 +8,19 @@ export const Header = () => {
   const [clickedLink, setClickedLink] = useState('');
 
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: NodeJS.Timeout | null = null;
     
     const handleScroll = () => {
       // Clear any existing underline when scroll starts
       setClickedLink('');
       
-      // Clear the timeout if it exists
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
+      
+      scrollTimeout = setTimeout(() => {
+        // Add any timeout logic here if needed
+      }, 200);
     };
 
     window.addEventListener('scroll', handleScroll);

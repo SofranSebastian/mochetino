@@ -9,6 +9,15 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Spalatorie covoare Timisoara - MOCHETINO",
   description: "Spalatorie covoare Timisoara - MOCHETINO",
+  icons: {
+    icon: [
+      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ]
+  }
 };
 
 export default function RootLayout({
@@ -21,10 +30,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="MOCHETINO - Spalatorie covoare Timișoara" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#FF0000" />
       </head>
       <body
         className={twMerge(montserrat.className, "antialiased bg-[#EAEEFE]")}

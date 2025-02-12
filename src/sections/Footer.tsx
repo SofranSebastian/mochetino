@@ -8,7 +8,7 @@ export const Footer = () => {
         <nav className="flex flex-col gap-6 mt-6 md:flex-row md:justify-center">
           <a href="#home">Acasă</a>
           <a href="#about">Despre noi</a>
-          <a href="#services">Servicii</a>
+          <a href="#services">Tarife</a>
           <a href="#testimonials">Păreri</a>
           <a 
             href="tel:0725629585" 

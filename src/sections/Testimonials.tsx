@@ -25,10 +25,8 @@ export const Testimonials = () => {
             Ce spun <span className="text-[#FF0000]">clienții</span> noștri
           </h2>
           <p className="text-gray-600 text-lg mb-16 max-w-3xl text-center px-4">
-            O mică afacere de familie care se ocupă cu spălarea covoarelor aduce
-            prospețime și confort în casele oamenilor. Prin servicii
-            personalizate, aceștia îndepărtează murdăria și alergenii,
-            revitalizând covoarele și îmbunătățind estetică locuințelor.
+            O mică afacere de familie care se ocupă cu spălarea covoarelor și reușește să redea strălucirea acestora în casele oamenilor. 
+            Prin servicii personalizate, îndepărtăm murdăria și alergenii, revitalizând covoarele și îmbunătățind estetică locuințelor.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 lg:gap-12 w-full max-w-[1800px] px-6 sm:px-8 lg:px-12">
             {testimonials.map(({ text, name }) => (

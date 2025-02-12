@@ -55,12 +55,12 @@ export const ProductShowcase = () => {
             </h2>
             
             <p className="text-gray-600 text-lg">
-              Noua spălătorie de covoare MOCHETINO din Timișoara vă oferă servicii profesionale și convenabile! 
+              Noua spălătorie de covoare MOCHETINO din Timișoara vă ajută să redați strălucirea covoarelor dumneavoastră! 
               Beneficiați de preluare și livrare GRATUITĂ la comenzi ce depășesc 10 mp de covoare.
               Program de luni până sâmbătă, 08:00 - 17:00.
             </p>
             <p className="text-gray-600 text-lg">
-              Covoare impecabile, fără efort din partea dumneavoastră.
+              Covoare impecabile, cu strălucire ca nouă, fără efort din partea dumneavoastră.
               Curățenia începe cu un simplu apel! Contactați-ne astăzi și lăsați-ne să ne ocupăm de tot.
             </p>
 

@@ -31,7 +31,7 @@ export const ProductShowcase = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src={productDescription}
-                alt="Product description"
+                alt="Spălătorie profesională covoare Timișoara - Servicii complete de curățare și livrare gratuită"
                 className="w-full h-auto"
               />
             </div>
@@ -55,13 +55,21 @@ export const ProductShowcase = () => {
             </h2>
             
             <p className="text-gray-600 text-lg">
-              Noua spălătorie de covoare MOCHETINO din Timișoara vă ajută să redați strălucirea covoarelor dumneavoastră! 
+              Noua spălătorie profesională de covoare MOCHETINO din Timișoara vă ajută să redați strălucirea covoarelor dumneavoastră! 
               Beneficiați de preluare și livrare GRATUITĂ la comenzi ce depășesc 10 mp de covoare.
-              Program de luni până sâmbătă, 08:00 - 17:00.
+              Serviciul nostru de curățare covoare este disponibil de luni până sâmbătă, între orele 08:00 - 17:00, 
+              oferind soluții complete pentru toate tipurile de covoare.
             </p>
             <p className="text-gray-600 text-lg">
               Covoare impecabile, cu strălucire ca nouă, fără efort din partea dumneavoastră.
-              Curățenia începe cu un simplu apel! Contactați-ne astăzi și lăsați-ne să ne ocupăm de tot.
+              Procesul nostru de curățare profesională include: aspirare în profunzime, tratare pete dificile, 
+              spălare cu detergenți profesioniști, și uscare controlată. Curățenia începe cu un simplu apel! 
+              Contactați-ne astăzi și lăsați-ne să ne ocupăm de tot.
+            </p>    
+            <p className="text-gray-600 text-lg">
+              Ca spălătorie profesională de covoare în Timișoara, ne-am specializat în curățarea și întreținerea 
+              tuturor tipurilor de covoare: moderne, tradiționale, cu fir lung (shaggy), covoare din lână, 
+              și covoare cu păr de animale. Fiecare covor primește un tratament personalizat pentru cele mai bune rezultate.
             </p>
 
             <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8">
@@ -77,7 +85,8 @@ export const ProductShowcase = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Calitate garantată</h3>
                 <p className="text-gray-600">
-                  Folosim tehnologii avansate și detergenți profesioniști pentru rezultate perfecte.
+                  Folosim tehnologii avansate și detergenți profesioniști pentru rezultate perfecte. 
+                  Garantăm îndepărtarea petelor și mirosurilor neplăcute.
                 </p>
               </div>
 
@@ -89,7 +98,8 @@ export const ProductShowcase = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Comunicare rapidă</h3>
                 <p className="text-gray-600">
-                  Răspundem prompt la solicitări și oferim servicii în timp util.
+                  Răspundem prompt la solicitări și oferim servicii în timp util. 
+                  Programare rapidă și livrare la ora stabilită.
                 </p>
               </div>
 
@@ -101,7 +111,8 @@ export const ProductShowcase = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Transport gratuit</h3>
                 <p className="text-gray-600">
-                  Beneficiați de preluare și livrare gratuită la comenzi peste 10 mp.
+                  Beneficiați de preluare și livrare gratuită la comenzi peste 10 mp. 
+                  Serviciu disponibil în Timișoara și împrejurimi.
                 </p>
               </div>
             </div>

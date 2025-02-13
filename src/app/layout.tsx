@@ -4,7 +4,13 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from '@vercel/analytics/next';
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ 
+  subsets: ["latin"],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  preload: true,
+  fallback: ['system-ui', 'arial']
+});
 
 export const metadata: Metadata = {
   title: "Servicii profesionale de spalare covoare in Timisoara",

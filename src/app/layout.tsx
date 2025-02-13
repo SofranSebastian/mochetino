@@ -7,8 +7,8 @@ import { Analytics } from '@vercel/analytics/next';
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spalatorie covoare Timisoara: MOCHETINO",
-  description: "Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu. Tehnologii avansate si detergenti profesionali pentru rezultate perfecte.",
+  title: "Servicii profesionale de spalare covoare in Timisoara",
+  description: "Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu. Tehnologii avansate si detergenti profesionali.",
   keywords: ["spalatorie covoare timisoara", "curatare covoare", "spalare covoare", "mochetino", "livrare gratuita", "servicii profesionale"],
   openGraph: {
     title: 'Spalatorie covoare Timisoara: MOCHETINO',

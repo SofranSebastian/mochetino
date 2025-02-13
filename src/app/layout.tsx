@@ -7,8 +7,31 @@ import { Analytics } from '@vercel/analytics/next';
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Spalatorie covoare Timisoara - MOCHETINO",
-  description: "Spalatorie covoare Timisoara - MOCHETINO",
+  title: "Spalatorie covoare Timisoara: MOCHETINO",
+  description: "Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu. Tehnologii avansate si detergenti profesionali pentru rezultate perfecte.",
+  keywords: ["spalatorie covoare timisoara", "curatare covoare", "spalare covoare", "mochetino", "livrare gratuita", "servicii profesionale"],
+  openGraph: {
+    title: 'Spalatorie covoare Timisoara: MOCHETINO',
+    description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
+    url: 'https://mochetino.ro',
+    siteName: 'MOCHETINO',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Spalatorie covoare Timisoara MOCHETINO - Servicii profesionale de curatare',
+      }
+    ],
+    locale: 'ro_RO',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spalatorie covoare Timisoara: MOCHETINO',
+    description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
+    images: ['/og-image.jpg'],
+  },
   icons: {
     icon: [
       { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
@@ -26,13 +49,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <head>
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#FF0000" />
+        <meta name="google-site-verification" content="google-site-verification=zHwsyHb3ILIJQmKES5iQu4i9E5sNxUKLnJfNLgTRzJA" />
       </head>
       <body
         className={twMerge(montserrat.className, "antialiased bg-[#EAEEFE]")}

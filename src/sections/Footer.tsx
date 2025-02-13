@@ -50,7 +50,7 @@ export const Footer = () => {
               </svg>
             </a>
           </div>
-          <p>&copy; {new Date().getFullYear()} MOCHETINO - Spalatorie covoare Timisoara. Toate drepturile sunt rezervate.</p>
+          <p>&copy; {new Date().getFullYear()} Spalatorie covoare Timisoara - MOCHETINO. Toate drepturile sunt rezervate.</p>
         </div>
       </div>
     </footer>

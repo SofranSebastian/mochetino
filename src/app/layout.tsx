@@ -56,7 +56,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#FF0000" />
-        <meta name="google-site-verification" content="google-site-verification=zHwsyHb3ILIJQmKES5iQu4i9E5sNxUKLnJfNLgTRzJA" />
+        <meta name="google-site-verification" content="zHwsyHb3ILIJQmKES5iQu4i9E5sNxUKLnJfNLgTRzJA" />
       </head>
       <body
         className={twMerge(montserrat.className, "antialiased bg-[#EAEEFE]")}

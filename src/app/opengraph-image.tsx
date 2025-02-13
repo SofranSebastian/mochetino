@@ -26,7 +26,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default async function Image() {
+export default function Image() {
   return new ImageResponse(
     (
       <div
@@ -39,6 +39,7 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '40px',
+          fontFamily: 'system-ui',
         }}
       >
         <div
@@ -113,16 +114,6 @@ export default async function Image() {
     ),
     {
       ...size,
-      fonts: [
-        {
-          name: 'Inter',
-          data: await fetch(
-            new URL('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2', import.meta.url)
-          ).then((res) => res.arrayBuffer()),
-          weight: 400,
-          style: 'normal',
-        },
-      ],
     }
   );
 } 

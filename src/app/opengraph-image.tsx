@@ -8,6 +8,24 @@ export const size = {
 };
 export const contentType = 'image/png';
 
+const CheckIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    style={{ display: 'inline-block' }}
+  >
+    <path
+      d="M20 6L9 17L4 12"
+      stroke="#FF0000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export default async function Image() {
   return new ImageResponse(
     (
@@ -72,7 +90,7 @@ export default async function Image() {
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
               }}
             >
-              <span style={{ color: '#FF0000', fontSize: 24 }}>✓</span>
+              <CheckIcon />
               <span style={{ color: '#4B5563', fontSize: 20 }}>Livrare gratuită</span>
             </div>
             <div
@@ -86,7 +104,7 @@ export default async function Image() {
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
               }}
             >
-              <span style={{ color: '#FF0000', fontSize: 24 }}>✓</span>
+              <CheckIcon />
               <span style={{ color: '#4B5563', fontSize: 20 }}>Calitate garantată</span>
             </div>
           </div>
@@ -95,6 +113,16 @@ export default async function Image() {
     ),
     {
       ...size,
+      fonts: [
+        {
+          name: 'Inter',
+          data: await fetch(
+            new URL('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2', import.meta.url)
+          ).then((res) => res.arrayBuffer()),
+          weight: 400,
+          style: 'normal',
+        },
+      ],
     }
   );
 } 

@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Servicii profesionale de spalare covoare in Timisoara",
-  description: "Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu. Tehnologii avansate si detergenti profesionali.",
+  description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
   keywords: ["spalatorie covoare timisoara", "curatare covoare", "spalare covoare", "mochetino", "livrare gratuita", "servicii profesionale"],
   openGraph: {
     title: 'Spalatorie covoare Timisoara: MOCHETINO',

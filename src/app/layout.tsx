@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     siteName: 'MOCHETINO',
     images: [
       {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/og-image.png',
+        width: 180,
+        height: 180,
         alt: 'Spalatorie covoare Timisoara MOCHETINO - Servicii profesionale de curatare',
       }
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spalatorie covoare Timisoara: MOCHETINO',
     description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [

@@ -16,11 +16,10 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /about
-Allow: /services
-Allow: /testimonials
-Allow: /contact
-
+Allow: /#about
+Allow: /#services
+Allow: /#testimonials
+Allow: /#contact
 # Block specific bots that might cause issues
 User-agent: GPTBot
 Disallow: /

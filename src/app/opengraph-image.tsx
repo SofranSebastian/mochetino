@@ -14,7 +14,7 @@ const CheckIcon = () => (
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    style={{ display: 'inline-block' }}
+    style={{ display: 'flex' }}
   >
     <path
       d="M20 6L9 17L4 12"

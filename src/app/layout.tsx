@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     siteName: 'MOCHETINO',
     images: [
       {
-        url: '/android-chrome-512x512.png',
+        url: '../android-chrome-512x512.png',
         width: 512,
         height: 512,
         alt: 'Spalatorie covoare Timisoara MOCHETINO - Servicii profesionale de curatare',
       },
       {
-        url: '/android-chrome-192x192.png',
+        url: '../android-chrome-192x192.png',
         width: 192,
         height: 192,
         alt: 'MOCHETINO Logo',
@@ -44,26 +44,26 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'Spalatorie covoare Timisoara: MOCHETINO',
     description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
-    images: ['/android-chrome-512x512.png'],
+    images: ['../android-chrome-512x512.png'],
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
-      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon-96x96.png', type: 'image/png', sizes: '96x96' },
-      { url: '/android-chrome-192x192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/android-chrome-512x512.png', type: 'image/png', sizes: '512x512' },
-      { url: '/favicon.svg', type: 'image/svg+xml' }
+      { url: '../favicon.ico' },
+      { url: '../favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '../favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '../favicon-96x96.png', type: 'image/png', sizes: '96x96' },
+      { url: '../android-chrome-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '../android-chrome-512x512.png', type: 'image/png', sizes: '512x512' },
+      { url: '../favicon.svg', type: 'image/svg+xml' }
     ],
-    shortcut: ['/favicon.ico'],
+    shortcut: ['../favicon.ico'],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '../apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
     ],
     other: [
       {
         rel: 'mask-icon',
-        url: '/favicon.svg',
+        url: '../favicon.svg',
         color: '#FF0000'
       }
     ]
@@ -78,16 +78,16 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192" />
-        <link rel="icon" type="image/png" href="/android-chrome-512x512.png" sizes="512x512" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/favicon.svg" color="#FF0000" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="../favicon.ico" />
+        <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="../android-chrome-192x192.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="../android-chrome-512x512.png" sizes="512x512" />
+        <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+        <link rel="mask-icon" href="../favicon.svg" color="#FF0000" />
+        <link rel="manifest" href="../site.webmanifest" />
         <meta name="theme-color" content="#FF0000" />
         <meta name="google-site-verification" content="zHwsyHb3ILIJQmKES5iQu4i9E5sNxUKLnJfNLgTRzJA" />
       </head>

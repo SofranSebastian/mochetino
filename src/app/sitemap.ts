@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mochetino.ro'
+  const baseUrl = 'https://www.mochetino.ro'
 
   // Main pages/sections from your navigation
   const routes = [

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Spalatorie covoare Timisoara: MOCHETINO',
     description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
-    url: 'https://mochetino.ro',
+    url: 'https://www.mochetino.ro',
     siteName: 'MOCHETINO',
     images: [
       {

@@ -9,8 +9,8 @@ Please ensure you have the following assets in your `/public` directory:
 - `favicon-16x16.png` - 16x16px PNG file for browser tabs
 - `favicon-32x32.png` - 32x32px PNG file for browser tabs
 - `apple-touch-icon.png` - 180x180px PNG file for iOS home screen icon
-- `android-chrome-192x192.png` - 192x192px PNG file for Android
-- `android-chrome-512x512.png` - 512x512px PNG file for Android
+- `web-app-manifest-192x192.png` - 192x192px PNG file for Android
+- `web-app-manifest-512x512.png` - 512x512px PNG file for Android
 
 All icons should use the brand red color (#FF0000) and feature the MOCHETINO logo.
 

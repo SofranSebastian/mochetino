@@ -51,6 +51,7 @@ export const Footer = () => {
             </a>
           </div>
           <p>&copy; {new Date().getFullYear()} Spalatorie covoare Timisoara - MOCHETINO. Toate drepturile sunt rezervate.</p>
+          <p>Designed and developed by <a href="https://softecxsolutions.com" target="_blank" rel="noopener noreferrer" className="text-[#FF0000] hover:text-[#E60000] font-medium inline-flex items-center gap-1 transition-colors whitespace-nowrap">SOFTECX SOLUTIONS S.R.L</a></p>
         </div>
       </div>
     </footer>

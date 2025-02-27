@@ -101,15 +101,31 @@ export default function RootLayout({
             gtag('js', new Date());
 
             gtag('config', 'AW-765082855');
+
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-765082855/I8SGCN3mgJoaEOf56OwC',
+                  'value': 0.2,
+                  'currency': 'EUR',
+                  'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
           `}
         </Script>
         <link rel="icon" href="./icon.ico" sizes="any"/>
-        {/* <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
         <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/png" href="../web-app-manifest-192x192.png" sizes="192x192" />
         <link rel="icon" type="image/png" href="../web-app-manifest-512x512.png" sizes="512x512" />
-        <link rel="icon" type="image/svg+xml" href="../favicon.svg" /> */}
+        <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
         <link rel="mask-icon" href="../favicon.svg" color="#FF0000" />
         <link rel="manifest" href="../site.webmanifest" />

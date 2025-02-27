@@ -3,6 +3,12 @@
 import LOGO_RED from "@/assets/LOGO_RED.svg";
 import { useState, useEffect } from "react";
 
+declare global {
+  interface Window {
+    gtag_report_conversion: (url?: string) => boolean;
+  }
+}
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [clickedLink, setClickedLink] = useState('');
@@ -43,6 +49,13 @@ export const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleCallClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window.gtag_report_conversion === 'function') {
+      e.preventDefault();
+      window.gtag_report_conversion('tel:0725629585');
+    }
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -81,6 +94,7 @@ export const Header = () => {
             ))}
             <a 
               href="tel:0725629585"
+              onClick={handleCallClick}
               className="bg-[#FF0000] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-[#E60000] transition-all duration-300"
             >
               Sună acum
@@ -125,6 +139,7 @@ export const Header = () => {
             ))}
             <a 
               href="tel:0725629585"
+              onClick={handleCallClick}
               className="block bg-[#FF0000] text-white px-6 py-2.5 rounded-lg font-medium hover:bg-[#E60000] transition-all duration-300 mx-4 text-center"
             >
               Sună acum

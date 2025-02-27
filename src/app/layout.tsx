@@ -15,9 +15,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.mochetino.ro'),
   title: "Servicii profesionale de spalare covoare in Timisoara",
   description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
   keywords: ["spalatorie covoare timisoara", "curatare covoare", "spalare covoare", "mochetino", "livrare gratuita", "servicii profesionale"],
+  alternates: {
+    canonical: 'https://www.mochetino.ro',
+  },
   robots: {
     index: true,
     follow: true,
@@ -37,13 +41,13 @@ export const metadata: Metadata = {
     siteName: 'MOCHETINO',
     images: [
       {
-        url: '../web-app-manifest-512x512.png',
+        url: 'https://www.mochetino.ro/opengraph-image?1236a763f49d59e1',
         width: 512,
         height: 512,
         alt: 'Spalatorie covoare Timisoara MOCHETINO - Servicii profesionale de curatare',
       },
       {
-        url: '../web-app-manifest-192x192.png',
+        url: 'https://www.mochetino.ro/opengraph-image?f7d41ac8be2c3310',
         width: 192,
         height: 192,
         alt: 'MOCHETINO Logo',
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'Spalatorie covoare Timisoara: MOCHETINO',
     description: 'Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.',
-    images: ['../web-app-manifest-512x512.png'],
+    images: ['https://www.mochetino.ro/opengraph-image?1e57153d8c7716c2'],
   },
   icons: {
     icon: [
@@ -119,16 +123,80 @@ export default function RootLayout({
             window.gtag_report_conversion = gtag_report_conversion;
           `}
         </Script>
-        <link rel="icon" href="./icon.ico" sizes="any"/>
-        <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="../web-app-manifest-192x192.png" sizes="192x192" />
-        <link rel="icon" type="image/png" href="../web-app-manifest-512x512.png" sizes="512x512" />
-        <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-        <link rel="mask-icon" href="../favicon.svg" color="#FF0000" />
-        <link rel="manifest" href="../site.webmanifest" />
+        <Script id="structured-data" type="application/ld+json">
+          {`
+            [{
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "MOCHETINO - Spălătorie covoare Timișoara",
+              "image": "https://www.mochetino.ro/android-chrome-512x512.png",
+              "description": "Servicii profesionale de spalare covoare in Timisoara. Curatare, igienizare si livrare gratuita la domiciliu.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Timișoara",
+                "addressRegion": "Timiș",
+                "addressCountry": "RO"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "45.7489",
+                "longitude": "21.2087"
+              },
+              "url": "https://www.mochetino.ro",
+              "telephone": "+40725629585",
+              "priceRange": "$$",
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "17:00"
+              },
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61569051051211",
+                "https://www.tiktok.com/@mochetino"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Servicii spălare covoare",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Spălare covoare",
+                      "description": "Serviciu profesional de spălare covoare cu livrare gratuită"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": "Procesul nostru de curățare",
+              "description": "Vezi cum îți putem transforma covorul - Procesul de curățare profesională MOCHETINO",
+              "thumbnailUrl": "https://www.mochetino.ro/web-app-manifest-512x512.png",
+              "uploadDate": "2024-01-01",
+              "contentUrl": "https://www.mochetino.ro/spalare.mp4",
+              "embedUrl": "https://www.mochetino.ro/spalare.mp4",
+              "publisher": {
+                "@type": "Organization",
+                "name": "MOCHETINO",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.mochetino.ro/web-app-manifest-512x512.png"
+                }
+              }
+            }]
+          `}
+        </Script>
         <meta name="theme-color" content="#FF0000" />
         <meta name="google-site-verification" content="zHwsyHb3ILIJQmKES5iQu4i9E5sNxUKLnJfNLgTRzJA" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

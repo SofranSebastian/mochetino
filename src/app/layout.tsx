@@ -4,7 +4,7 @@ import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
+import Script from 'next/script';
 
 const montserrat = Montserrat({ 
   subsets: ["latin"],
@@ -90,6 +90,19 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-765082855"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-765082855');
+          `}
+        </Script>
         <link rel="icon" href="./icon.ico" sizes="any"/>
         {/* <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
         <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />

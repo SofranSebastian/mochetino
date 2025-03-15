@@ -148,11 +148,11 @@ export const Hero = () => {
               <div className="absolute left-2/3 top-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-12 bg-gray-200"></div>
               
               <div className="text-center flex flex-col items-center">
-                <div className="text-3xl font-bold text-gray-800 mb-1">50+</div>
+                <div className="text-3xl font-bold text-gray-800 mb-1">250+</div>
                 <div className="text-sm text-gray-600">Clienți mulțumiți</div>
               </div>
               <div className="text-center flex flex-col items-center">
-                <div className="text-3xl font-bold text-gray-800 mb-1">200+</div>
+                <div className="text-3xl font-bold text-gray-800 mb-1">1000+</div>
                 <div className="text-sm text-gray-600">Covoare curățate</div>
               </div>
               <div className="text-center flex flex-col items-center">
